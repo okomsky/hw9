@@ -27,20 +27,18 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int min = 0;
-        int max = 250_000;
-        for (final int current : arr) {
-            if (current > min) {
+        int min = 200_000;
+        int max = 100_000;
+        for ( int current : arr) {
+            if (current > max) {
+                max = current;
+            }
+            if (current < min) {
                 min = current;
             }
         }
-        for (final int current : arr) {
-            if (current < max) {
-                max = current;
-            }
-        }
-        System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
     }
     public static void task3() {
         System.out.println("Задача 3");
